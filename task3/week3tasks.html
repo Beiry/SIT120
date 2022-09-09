@@ -1,0 +1,36 @@
+<p id="test">
+    <script>
+        let str = "hello my name is jake";
+        console.log(str);
+        console.log(str.length);
+        console.log(str.slice(17, 22));
+        console.log(str.substring(6, 23));
+
+        let newstr = str.replace("hello my name is jake", "Hello. My name is Jake.");
+        console.log(newstr);
+        console.log(newstr.slice(18, 22));
+        console.log(newstr.substring(7, 23));
+
+    </script>
+</p>
+<script>
+    const numberarray = [2, 4, 6, 8, 10, 12];
+    const stringarray = ["Alpha", "Beta", "Charlie", "Delta", "Echo"];
+    console.log(numberarray);
+    console.log(numberarray.join(", "));
+    console.log(numberarray.shift());
+    console.log(numberarray.unshift(2));
+    console.log(numberarray);
+
+
+    console.log(stringarray);
+    console.log(stringarray.join(", "));
+    console.log(stringarray.push("Foxtrot"));
+    console.log(stringarray);
+
+    const newarray = (numberarray.concat(stringarray));
+    console.log(newarray);
+
+
+
+</script>
