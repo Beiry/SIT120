@@ -1,0 +1,111 @@
+<html>
+
+<body>
+
+
+    <style>
+        :root {
+            --fontcc: Arial;
+        }
+
+        p {
+            font-family: var(--fontcc);
+        }
+
+        .dropbtn {
+            background-color: red;
+            color: white;
+            padding: 8px;
+            font-family: var(--fontcc);
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: darkred;
+        }
+    </style>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p>
+    <p>Choose your background color:
+
+
+        <input type="color" id="backgroundcolorchoice" name="backgroundcolorchoice" value="#FFFFFF"
+            onchange="colourChange()">
+
+
+        <body>
+            <p>Choose your font:</p>
+            <div class="dropdown">
+
+                <button class="dropbtn">Fonts</button>
+                <div class="dropdown-content">
+                    <a onclick="chooseFont('Arial')">Arial</a>
+                    <a onclick="chooseFont('Verdana')">Verdana</a>
+                    <a onclick="chooseFont('Helvetica')">Helvetica</a>
+                    <a onclick="chooseFont('Tahoma')">Tahoma</a>
+                    <a onclick="chooseFont('Trebuchet MS')">Trebuchet MS</a>
+                    <a onclick="chooseFont('Times New Roma')">Times New Roman</a>
+                    <a onclick="chooseFont('Georgia')">Georgia</a>
+                    <a onclick="chooseFont('Garamond')">Garamond</a>
+                    <a onclick="chooseFont('Courier New')">Courier New</a>
+                    <a onclick="chooseFont('Brush Script MT')">Brush Script MT</a>
+                </div>
+            </div>
+
+            <!-- Change the Colour of the background with the Color Input -->
+            <script>
+                function colourChange() {
+                    let colour = document.getElementById('backgroundcolorchoice').value;
+                    document.body.style.backgroundColor = colour;
+                }
+            </script>
+
+            <!-- Change the Font of the page using the dropdown menu -->
+            <script>
+                function chooseFont(fontc) {
+                    let chosenFont = fontc;
+                    var cssvariables = document.querySelector(':root');
+                    cssvariables.style.setProperty('--fontcc', chosenFont);
+                }
+            </script>
+
+    </p>
+</body>
+
+
+
+</html>
